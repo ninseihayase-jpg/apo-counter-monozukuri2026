@@ -890,7 +890,7 @@ async function testSlack() {
   const url=document.getElementById('slackInput').value.trim();
   if(!url) { toast('⚠ Webhook URLを入力してください'); return; }
   toast('📨 テストメッセージを送信中...');
-  const ok = await pushSlack(url,'🎉 *アポカウンター 接続テスト*\nSlack連携が正常に動作しています！ものづくりワールド2026、全員で頑張りましょう！');
+  const ok = await pushSlack(url,'test');
   setTimeout(()=>toast(ok?'✅ テスト送信完了！Slackをご確認ください':'⚠ 送信に失敗しました。URLを確認してください'),800);
 }
 function resetAll() {
